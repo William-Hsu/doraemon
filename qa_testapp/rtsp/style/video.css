@@ -1,0 +1,411 @@
+html, body {
+  font-family: "MozTT", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  background: black;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+  background: linear-gradient(to bottom, #222 0%,#000 100%);
+}
+li {
+  margin: 0;
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  list-style-type: none;
+  padding-bottom: 1px;
+}
+.unwatched {
+  width: 2px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background: #21a6b9;
+}
+li img {
+  height: 120px;
+  width: 210px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+li p {
+  display: block;
+  width: auto;
+  margin: 20px 10px 0 220px;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+li p.name {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+li p.time {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  color: #95a3a6;
+}
+li:last-child hr {
+  display: none;
+}
+li hr {
+  position: absolute;
+  bottom: -5px;
+  left: 210px;
+  right: 20px;
+  height: 0px;
+  border: 0;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+/* fullscreen video player */
+#videoFrame {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#delete-video-button {
+  background: transparent url(images/delete.png) no-repeat center center;
+}
+
+#delete-video-button:active {
+  background-color: #21a6b9;
+}
+
+#videoFrame.hidden, #novideos.hidden, #overlay.hidden,
+#thumbnails.hidden, #delete-video-button.hidden {
+  display: none;
+}
+
+#player {
+  /* size and position are set in JS depending on*/
+  /* video size and screen orientation */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+/*
+ * The overlay is where we display messages like Scanning, No Videos,
+ * No SD card and SD Card in Use along with instructions for resolving
+ * the issue.  The user can't interact with the app while the overlay
+ * is displayed.
+ */
+#overlay {
+  /* it takes up the whole screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  /* almost transparent gray */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*
+ * The overlay content area holds the text of the overlay.
+ * It has borders and a less transparent background so that
+ * the overlay text shows up more clearly
+ */
+#overlay-content {
+  background:
+  url(images/ui/pattern.png) repeat left top,
+  url(images/ui/gradient.png) no-repeat left top;
+  background-size: auto auto, 100% 100%;
+  /* We can't use shortand with background size because is not implemented yet:
+  https://bugzilla.mozilla.org/show_bug.cgi?id=570326; */
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "MozTT", Sans-serif;
+  font-size: 0;
+  /* Using font-size: 0; we avoid the unwanted visual space (about 3px)
+  created by white-spaces and break lines in the code betewen inline-block elements */
+  color: #fff;
+  padding: 110px 25px 0px 25px;
+}
+
+#overlay-title {
+  font-weight: normal;
+  font-size: 1.9rem;
+  color: #fff;
+  margin: 0 5px -10px 5px;
+}
+
+#overlay-text {
+  padding: 10px 5px 0 5px;
+  border-top: 1px solid #686868;	
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #ebebeb;
+}
+
+/* localization */
+body.hidden *[data-l10n-id] {
+  visibility: hidden;
+}
+*[dir=rtl] li {
+  padding: 0 144px 0 20px;
+}
+*[dir=rtl] li img {
+  left: auto;
+  right: 0;
+}
+
+#close {
+  outline: none;
+}
+
+#h1 {
+  background: none !important;
+}
+
+.icon-back {
+  pointer-events: none;
+  width: 2.3rem !important;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+header h1 {
+  font-size: 2.5rem !important;
+  line-height: 5rem !important;
+  margin: 0px 0px 0px 3.4rem !important;
+}
+
+
+
+/* the indeterminate progress bar displayed while scanning */
+#throbber {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  display: none;
+  z-index: 100;
+}
+
+#throbber > div {
+  height: 24px;
+  background-image: url(images/progress.png);
+}
+
+#throbber.throb > div {
+  animation: 1s throb infinite steps(7);
+}
+
+@keyframes throb {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-21px);
+  }
+}
+
+header .icon:after {
+  background: none !important;
+}
+
+/* video player controls */
+#videoControls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 1;
+  -moz-transition: opacity 0.5s;
+}
+#videoControls.hidden {
+  opacity: 0;
+}
+
+/* main control bar: play|pause, timeupdate, rwd|fwd */
+#videoBar {
+  background-image: url(images/scroll_bar_bg.png);
+  background-color: rgba(0, 0, 0, 0.75);
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 4.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+#play, #play:after {
+  width: 8rem;
+  height: 4.5rem;
+}
+
+#play {
+  background: url(images/button_bg_normal.png) no-repeat;
+  position: absolute;
+  border: none;
+  padding: 0;
+  margin: 0;
+  left: 0.5rem;
+  top: 0;
+  z-index: 20;
+}
+
+#play:active {
+  background: url(images/button_bg_pressed.png) no-repeat;
+}
+
+#play:after {
+  background-position: 2.3rem 0.8rem;
+  background-repeat: no-repeat;
+  content: " ";
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+/* play/pause button */
+#play:after {
+  background-image: url("images/pause.png");
+}
+#play.paused:after {
+  background-image: url("images/play.png");
+}
+
+/* time slider */
+#timeSlider {
+  position: absolute;
+  left: 8.5rem;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+}
+
+#timeSlider span {
+  display: block;
+  width: 5.9rem;
+  position: absolute;
+  color: #A1AFB2;
+  height: 100%;
+  line-height: 4.6rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#duration-text {
+  right: 0.5rem;
+}
+
+#slider-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 7rem;
+  right: 7rem;
+  height: 100%;
+}
+
+#slider-wrapper div {
+  position: absolute;
+  pointer-events: none;
+}
+
+.progress {
+  height: 4px;
+  width: 0%;
+  top: 50%;
+  margin-top: -2px;
+}
+
+#elapsedTime {
+  background: url(images/timeline_filled.png) no-repeat left center;
+  z-index: 30;
+}
+
+#bufferedTime {
+  background-color: blue;
+  z-index: 20;
+}
+
+#timeBackground {
+  background: url(images/timeline.png);
+  z-index: 10;
+  width: 100%;
+}
+
+#playHead {
+  -moz-transition: background 1s linear;
+  background: url(images/scrubber.png);
+  margin: -1.1rem 0 0 -1.2rem;
+  position: absolute;
+  pointer-events: none;
+  border: none;
+  display: block;
+  height: 2.4rem;
+  width: 2.7rem;
+  z-index: 100;
+  top: 49%;
+}
+
+#playHead.active {
+  background: url(images/scrubber_pressed.png);
+  width: 8.1rem;
+  height: 4.5rem;
+  margin: -1rem 0 0 -3.93rem;
+  top: 1rem;
+}
+
+@media screen and (width: 320px) {
+  #play, #play:after {
+    width: 5.6rem;
+  }
+
+  #play {
+    background-image: url(images/portrait/button_bg_normal.png);
+  }
+
+  #play:active {
+    background-image: url(images/portrait/button_bg_pressed.png);
+  }
+
+  #play:after {
+    background-position: 1.1rem 0.8rem;
+  }
+
+  #timeSlider {
+    left: 6.1rem;
+  }
+
+  #videoBar {
+    background-image: url(images/portrait/scroll_bar_bg.png);
+    background-position: 6rem center;
+  }
+}
+
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }

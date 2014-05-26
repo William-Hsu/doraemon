@@ -1,0 +1,37 @@
+{
+    "acknowledged_risks": true,
+    "skip_warning": true,
+    "wifi": {"ssid": "Mozilla Mobile", "keyManagement": "WPA-PSK", "psk": "im987tuszyp4v"},
+    "email": {
+        "gmail": {
+            "name": "TPE QA",
+            "email": "moztpeqa@gmail.com",
+            "password": "tpemozilla"},
+        "IMAP": {
+            "name": "William Hsu",
+            "email": "moztpeqa@gmail.com",
+            "password": "mozillaqa",
+            "imap_hostname": "imap.gmail.com",
+            "imap_name": "moztpeqa@gmail.com",
+            "imap_port": "993",
+            "smtp_hostname":"smtp.gmail.com",
+            "smtp_name":"moztpeqa@gmail.com",
+            "smtp_port": "465"},
+        "ActiveSync": {
+            "name": "William Hsu",
+            "email": "moztpeqa@hotmail.com",
+            "password": "!QAZ2wsx",
+            "active_sync_hostname": "m.hotmail.com",
+            "active_sync_username": "moztpeqa@hotmail.com"},
+        "POP3": {
+            "name": "William Hsu",
+            "email": "moztpeqa@gmail.com",
+            "password": "mozillaqa",
+            "pop3_hostname": "pop.gmail.com",
+            "pop3_name": "moztpeqa@gmail.com",
+            "pop3_port": "995",
+            "smtp_hostname":"smtp.gmail.com",
+            "smtp_name": "moztpeqa@gmail.com",
+            "smtp_port": "465"}
+    }
+}
