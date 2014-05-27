@@ -1,0 +1,35 @@
+/* Effective stylesheet produced by snapshot save */
+ol.results { text-align: left; font-size: 10px; list-style: none outside none; display: none; }
+.alldone ol.results { display: block; width: 48%; float: left; }
+ol.results li { clear: both; overflow: auto; }
+ol.results b { display: block; width: 200px; float: left; text-align: right; padding-right: 15px; }
+div.results { width: 420px; margin: 0px auto 20px; text-align: left; padding: 10px; }
+h1 { text-align: left; }
+body { font: 11px/180% "Lucida Grande",Helvetica,Arial,sans-serif; background: url("bg.png") repeat-x scroll 0% 0% black; margin: 0px auto; padding: 0px; color: rgb(238, 238, 238); text-align: center; }
+div, img, form, ul { margin: 0px; padding: 0px; border: 0px none; }
+small { font-size: 9px; }
+div, span, td, .text_l { text-align: left; }
+a { color: rgb(249, 242, 161); }
+#wrapper { width: 690px; margin: -7px auto 0px; padding: 0px; text-align: center; }
+#main { padding-bottom: 40px; }
+div.results { padding: 10px; margin-bottom: 20px; background: none repeat scroll 0% 0% rgb(199, 51, 29); }
+div.result-item { position: relative; width: 48%; float: left; overflow: hidden; margin-left: 1%; margin-right: 1%; height: 100px; }
+.alldone div.result-item { width: 98%; height: auto; margin-bottom: 10px; overflow: auto; }
+.alldone div.result-item p { width: 48%; float: left; }
+div.result-item p { padding: 0px 4px; }
+div.test { overflow: hidden; margin: 4px 0px; }
+div.test b { display: block; width: 100%; text-align: left; margin: 0px; background: none repeat scroll 0% 0% rgb(199, 51, 29); padding: 4px; }
+div.done div.test b { background: none repeat scroll 0% 0% rgb(34, 34, 34); }
+div.bar { width: 100px; border: 1px inset rgb(102, 102, 102); background: none repeat scroll 0% 0% rgb(199, 51, 29); text-align: left; position: absolute; top: 7px; right: 4px; }
+div.bar div { height: 20px; background: none repeat scroll 0% 0% rgb(34, 34, 34); text-align: right; }
+div.done div.bar div { background: none repeat scroll 0% 0% rgb(88, 189, 121); color: rgb(0, 0, 0); }
+div.bar span { padding-left: 5px; padding-right: 5px; }
+h1 { font-size: 28px; border-bottom: 1px solid rgb(170, 170, 170); position: relative; padding: 0px 1% 2px; }
+h1 div.bar { font-size: 10px; width: 275px; top: -2px; right: 1%; }
+ul#tests { clear: both; width: 420px; margin: 0px auto; text-align: left; padding: 10px; list-style: none outside none; }
+#tests b { background: none repeat scroll 0% 0% rgb(199, 51, 29); color: rgb(0, 0, 0); display: block; padding: 4px 0px 4px 4px; margin-left: -20px; margin-bottom: 5px; font-size: 1.1em; font-weight: normal; }
+#tests b.recommended { background: none repeat scroll 0% 0% rgb(88, 189, 121); }
+#tests a:first-of-type { font-size: 1.2em; }
+#tests b a { font-weight: bold; color: rgb(0, 0, 0); }
+#tests li { padding-left: 10px; padding-bottom: 5px; }
+#overview { position: relative; }
