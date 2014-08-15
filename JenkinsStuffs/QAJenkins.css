@@ -10,5 +10,8 @@
 
 #main-table {
   background-image: url(FxOS.png);
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
 }
 
