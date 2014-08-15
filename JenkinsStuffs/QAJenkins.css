@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #jenkins-home-icon {
-  background-image: url(Mozilla_Logo.png);
+  background-image: url("./Mozilla_Logo.png");
   background-repeat: no-repeat;
   width: auto;
   height: auto;
@@ -9,7 +9,7 @@
 
 
 #main-table {
-  background-image: url(FxOS.png);
+  background-image: url("./FxOS.png");
   background-repeat: no-repeat;
   width: auto;
   height: auto;
