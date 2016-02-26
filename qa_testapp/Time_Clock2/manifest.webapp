@@ -1,0 +1,13 @@
+{
+  "name": "Time_Clock2",
+  "description": "Time & Clock API test app",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "nothing.png"
+  },
+  "default_locale": "ko",
+  "type": "certified",
+  "permissions": {
+    "time": {}
+  }
+}

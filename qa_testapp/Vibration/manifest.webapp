@@ -1,0 +1,10 @@
+{
+  "name": "Vibration",
+  "description": "Vibration API test app",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "images/app_icon_128.png",
+    "60": "images/app_icon_60.png"
+  },
+  "default_locale": "en"
+}

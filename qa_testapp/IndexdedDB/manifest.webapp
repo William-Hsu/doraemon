@@ -1,0 +1,13 @@
+{
+    "version":"1.0",
+	"name": "Notes",
+    "description": "This app uses the HTML5 Indexed API to demonstrate how to save data in your Firefox OS Apps.",
+    "launch_path": "/index.html",
+	"fullscreen": "false",
+    "icons": {
+        "16": "img/icons/icon-16.png",
+        "48": "img/icons/icon-48.png",
+        "128": "img/icons/icon-128.png"
+    },
+    "default_locale": "en"
+}
