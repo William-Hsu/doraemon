@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Aurelio De Rosa">
+        <title>Screen Orientation API Demo</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script type="text/javascript" src="./js/app.js"></script>
+    </head>
+
+    <body>
+        <h1>Screen Orientation API</h1>
+        <span id="so-unsupported" class="api-support hidden">API not supported</span>
+        <div id="so-results">
+        <p>
+            The orientation of the device is <span id="orientation" class="value">unavailable</span>
+        </p>
+        <form id="form-orientation">
+            <label for="orientation">Lock the device in:</label>
+            <select id="orientation-type">
+                <option value="portrait">portrait</option>
+                <option value="landscape">landscape</option>
+                <option value="portrait-primary">portrait-primary</option>
+                <option value="portrait-secondary">portrait-secondary</option>
+                <option value="landscape-primary">landscape-primary</option>
+                <option value="landscape-secondary">landscape-secondary</option>
+            </select>
+            <br/>
+            <input class="button-demo" id="lock-button" type="submit" value="Lock!" />
+            <button class="button-demo" id="unlock-button">Unlock!</button>
+        </form>
+        </div>
+    </body>
+</html>
