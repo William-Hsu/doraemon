@@ -1,6 +1,6 @@
 {
-  "name": "J Geolocation",
-  "description": "Geolocation Sample by J Team",
+  "name": "Geolocation",
+  "description": "Geolocation Demo",
   "type": "certified",
   "launch_path": "/index.html",
   "permissions": {
@@ -14,7 +14,7 @@
       "description": "Gaia Geolocation"
     },
     "en-US": {
-      "name": "J Geolocation",
+      "name": "Geolocation",
       "description": "Gaia Geolocation"
     },
     "fr": {
@@ -26,9 +26,11 @@
       "description": "지오로케이션"
     }
  },
-  "default_locale": "ko",
+  "default_locale": "en-US",
   "icons": {
-    "128": "/style/geo_icon.png"
+    "256": "./img/app-icon256.png",
+    "128": "./img/app-icon128.png",
+    "64": "./img/app-icon64.png"
   },
   "orientation": "portrait-primary"
 }
