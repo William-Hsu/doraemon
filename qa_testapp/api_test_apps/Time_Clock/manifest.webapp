@@ -1,13 +1,15 @@
 {
-  "name": "Time_Clock",
-  "description": "Time & Clock API test app",
-  "launch_path": "/index.html",
-  "icons": {
-    "128": "nothing.png"
-  },
-  "default_locale": "en",
-  "type": "certified",
-  "permissions": {
-    "time": {}
-  }
+    "name": "Time_Clock API",
+    "description": "Time & Clock API test app",
+    "launch_path": "/index.html",
+    "icons": {
+        "64": "img/app-icon64.png",
+        "128": "img/app-icon128.png",
+        "256": "img/app-icon256.png"
+    },
+    "default_locale": "en",
+    "type": "certified",
+    "permissions": {
+        "time": {}
+    }
 }

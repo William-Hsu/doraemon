@@ -1,13 +1,12 @@
 {
-  "version": "0.0.1",
-  "name": "Screen Orientation",
-  "description": "Screen Orientation API test",
-  "launch_path": "index.html",
-  "icons": {
-    "64": "/images/icon-64.png",
-    "256": "/images/icon-256.png"
-  },
-  "permissions": {
-  },
-  "default_locale": "en"
+    "version": "0.0.1",
+    "name": "Screen Orientation API",
+    "description": "Screen Orientation API test",
+    "launch_path": "index.html",
+    "icons": {
+        "64": "/img/app-icon64.png",
+        "128": "/img/app-icon128.png"
+    },
+    "permissions": {},
+    "default_locale": "en"
 }

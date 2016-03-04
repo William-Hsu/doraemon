@@ -1,6 +1,6 @@
 {
     "version":"1.0",
-	"name": "Notes",
+	"name": "IndexedDB API",
     "description": "This app uses the HTML5 Indexed API to demonstrate how to save data in your Firefox OS Apps.",
     "launch_path": "/index.html",
 	"fullscreen": "false",

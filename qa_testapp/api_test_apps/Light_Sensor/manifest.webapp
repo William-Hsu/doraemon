@@ -1,6 +1,6 @@
 {
     "version": "0.1",
-    "description": "DeviceLightAPI",
+    "description": "DeviceLight API",
     "name": "DeviceLight",
     "launch_path": "/index.html",
     "icons": {

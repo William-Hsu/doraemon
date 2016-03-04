@@ -1,13 +1,11 @@
 {
-  "version": "0.0.1",
-  "name": "Team S2 test",
-  "description": "I want to test Battery Status API",
-  "launch_path": "index.html",
-  "icons": {
-    "64": "/images/icon-64.png",
-    "256": "/images/icon-256.png"
-  },
-  "permissions": {
-  },
-  "default_locale": "en"
+    "version": "0.0.1",
+    "name": "Battery Status API",
+    "description": "I want to test Battery Status API",
+    "launch_path": "/index.html",
+    "icons": {
+        "64": "/images/icon-64.png",
+        "256": "/images/icon-256.png"
+    },
+    "permissions": {}
 }

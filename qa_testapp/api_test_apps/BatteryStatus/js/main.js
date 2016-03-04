@@ -7,7 +7,7 @@ var battery_width = 100;
 var battery_height = 200;
 
 $(function () {
-	battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+    battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
   
 	batteryCanvas = jQuery("#batteryCanvas")[0];
 

@@ -2,7 +2,7 @@
 var db;
 
 function initializeDB() {
-	if (window.indexedDB) {
+    if (window.indexedDB) {
 	  console.log("IndexedDB support is there");
 	}
 	else {
