@@ -1,0 +1,19 @@
+{
+    "version": "0.0.1",
+    "name": "DeviceStorage API",
+    "description": "The app is designed to test DeviceStorage API",
+    "type": "privileged",
+    "launch_path": "/index.html",
+    "icons": {
+        "64": "/img/app-icon64.png",
+        "128": "/img/app-icon128.png",
+        "256": "/img/app-icon256.png"
+    },
+    "permissions": {
+        "device-storage:music":{ "access": "readwrite" },
+        "device-storage:pictures":{ "access": "readwrite" },
+        "device-storage:sdcard":{ "access": "readwrite" },
+        "device-storage:videos":{ "access": "readwrite" }
+    },
+    "default_locale": "en"
+}

@@ -1,0 +1,31 @@
+.center {
+  display: block;
+  margin: 0px auto;
+  text-align: center
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+p.success {
+  color: green;
+}
+p.error {
+  color: red;
+}
+input {
+  font-size: 1.5rem;
+}
+button, input[type='button'] {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    padding: 0.5em;
+    display: inline-block;
+    margin: 1em auto;
+}
